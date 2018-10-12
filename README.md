@@ -4,18 +4,18 @@ Taking the cs50 course, I learned the basic algorithms and datastructers. After 
 
 ## Sort
 
-[] Selection Sort
-[x] Bubble Sort 2018-10-12
-[] Merge Sort
-[] Insertion Sort
+-[] Selection Sort
+-[x] Bubble Sort 2018-10-12
+-[] Merge Sort
+-[] Insertion Sort
 
 ## Search
 
-[] Linear Search
-[] Binary Search
+-[] Linear Search
+-[] Binary Search
 
 ## Data structure
 
-[] Sigle linked List
-[] Hashtable
-[] Tries
+-[] Sigle linked List
+-[] Hashtable
+-[] Tries
