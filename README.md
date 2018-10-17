@@ -6,7 +6,7 @@ Taking the cs50 course, I learned the basic algorithms and datastructers. After 
 
 - [x] Selection Sort 2018-10-16
 - [x] Bubble Sort 2018-10-12
-- [ ] Merge Sort
+- [x] Merge Sort 2018-10-17
 - [ ] Insertion Sort
 
 ## Search

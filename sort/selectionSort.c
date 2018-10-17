@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/*
+ * Selection sort 
+ * [12, 3, 8, 11, 9]
+ * 1st loop Find the number for first index by iterating the array and put it on the first index
+ * 2nd loop Find the number for second index by iterating the array loop and put it on the second index
+ * 3rd loop Find the number for third index by iterating the array loop and put it on the third index
+ * 4th loop Find the number for fourth index by iterating the array loop and put it on the fourth index
+*/
+
 void selectionSort(int array[], int len);
 void swap(int array[], int i, int j);
 void printArray(int array[], int len);
@@ -16,14 +25,6 @@ int main(void)
     printArray(unsortedArray, len);
 }
 
-/*
- * Selection sort 
- * [12, 3, 8, 11, 9]
- * 1st loop Find the number for first index by iterating the array and put it on the first index
- * 2nd loop Find the number for second index by iterating the array loop and put it on the second index
- * 3rd loop Find the number for third index by iterating the array loop and put it on the third index
- * 4th loop Find the number for fourth index by iterating the array loop and put it on the fourth index
-*/
 void selectionSort(int array[], int len)
 {
     for (int i = 0; i < len - 1; i++)

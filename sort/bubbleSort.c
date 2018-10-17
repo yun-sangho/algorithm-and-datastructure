@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/*
+ * Bubble sort 
+ * [12, 3, 8, 11, 9]
+ * 1st loop 4 steps for sort [12, 3, 8, 11, 9] => [3, 12, 8, 11, 9] => [3, 8, 12, 11, 9] ... => [3, 8, 11, 9, 12]
+ * 2nd loop 3 steps for sort [3, 8, 11, 9, 12] => ... => [3, 8, 9, 11, 12]
+ * 3rd loop 2 steps for sort [3, 8, 9, 11, 12]
+ * 4th loop There is any sort in 3rd loop so the loop stops
+*/
+
 void bubbleSort(int array[], int len);
 void swap(int array[], int i, int j);
 void printArray(int array[], int len);
@@ -16,14 +25,7 @@ int main(void)
     printArray(unsortedArray, len);
 }
 
-/*
- * Bubble sort 
- * [12, 3, 8, 11, 9]
- * 1st loop 4 steps for sort [12, 3, 8, 11, 9] => [3, 12, 8, 11, 9] => [3, 8, 12, 11, 9] ... => [3, 8, 11, 9, 12]
- * 2nd loop 3 steps for sort [3, 8, 11, 9, 12] => ... => [3, 8, 9, 11, 12]
- * 3rd loop 2 steps for sort [3, 8, 9, 11, 12]
- * 4th loop There is any sort in 3rd loop so the loop stops
-*/
+
 void bubbleSort(int array[], int len)
 {
     int swap_counter = -1;
