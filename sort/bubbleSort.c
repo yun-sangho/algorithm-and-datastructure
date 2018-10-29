@@ -10,7 +10,7 @@
 */
 
 void bubbleSort(int array[], int len);
-void swap(int array[], int i, int j);
+void swap(int *i, int *j);
 void printArray(int array[], int len);
 
 int main(void)
