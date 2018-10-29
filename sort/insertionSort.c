@@ -1,5 +1,14 @@
 #include <stdio.h>
 
+/*
+ * Insertion sort 
+ * [12, 3, 8, 11, 9]
+ * 1st loop [3, 12, 8, 11, 9]
+ * 2nd loop [3, 8, 12, 11, 9]
+ * 3rd loop [3, 8, 11, 12, 9]
+ * 4th loop [3, 8, 11, 9, 12] => [3, 8, 9, 11, 12] 
+*/
+
 void insertionSort(int array[], int len);
 void printArray(int array[], int len);
 
