@@ -1,65 +1,37 @@
 #include <stdio.h>
-#include <cs50.h>
 
-void swap(int array[], int i, int j);
-void printArray(int len, int array[]);
+void insertionSort(int array[], int len);
+void printArray(int array[], int len);
 
 int main(void)
 {
-    int len;
+    int unsortedArray[] = {63, 21, 3, 25, 10, 98, 23, 47, 38};
+    int len = sizeof(unsortedArray)/sizeof(unsortedArray[0]);
 
-    do
-    {
-        len = get_int("Insert the length of array: ");
+    printArray(unsortedArray, len);
 
-    } while (len < 0);
+    insertionSort(unsortedArray, len);
 
-    int array[len];
-
-    for (int i = 0; i < len; i ++)
-    {
-        int value = get_int("Insert the value of array: ");
-        array[i] = value;
-    }
-
-    printArray(len, array);
-
-    for (int i = 0; i < len - 1; i++)
-    {
-        int unsorted_value = array[i + 1];
-        int insertion_position = i + 1;
-
-        for (int j = i; j >= 0; j--)
-        {
-            if (array[j] > unsorted_value)
-            {
-                array[j + 1] = array[j];
-                insertion_position--;
-            } else
-            {
-                break;
-            }
-        }
-
-        array[insertion_position] = unsorted_value;
-    }
-
-    printArray(len, array);
+    printArray(unsortedArray, len);
 }
 
-void swap(int array[], int i, int j)
+void insertionSort(int array[], int len)
 {
-    if (i == j)
+    for (int i = 1; i < len; i++)
     {
-        return;
+        int unsorted_value = array[i];
+        int insertion_position = i - 1;
+        
+        while (insertion_position >= 0 && array[insertion_position] > unsorted_value)
+        {
+            array[insertion_position + 1] = array[insertion_position];
+            insertion_position--;
+        }       
+        array[insertion_position] = unsorted_value;       
     }
-
-    int temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
 }
 
-void printArray(int len, int array[])
+void printArray(int array[], int len)
 {
     printf("Array: ");
 
