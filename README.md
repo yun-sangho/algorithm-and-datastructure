@@ -12,7 +12,7 @@ Taking the cs50 course, I learned the basic algorithms and datastructers. After 
 ## Search
 
 - [x] Linear Search 2018-10-19
-- [ ] Binary Search
+- [x] Binary Search 2018-10-30
 
 ## Data structure
 
