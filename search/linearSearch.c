@@ -1,18 +1,14 @@
 #include <stdio.h>
 
 void linear_search(int array[], int len, int value);
-void printArray(int array[], int len);
 
 int main(void)
 {
     int array[] = {63, 21, 3, 25, 10, 98, 23, 47, 38};
     int len = sizeof(array)/sizeof(array[0]);
 
-    printArray(array, len);
-
     linear_search(array, len, 10);
-
-    printArray(array, len);
+    linear_search(array, len, 49);
 }
 
 int linear_search(int array[], int len, int value)
@@ -39,16 +35,4 @@ int linear_search(int array[], int len, int value)
     // Otherwise
     printf("%i is %ith value in the array\n", target, index);
     return 1;
-}
-
-void printArray(int array[], int len)
-{
-    printf("Array: ");
-
-    for (int x = 0; x < len; x ++)
-    {
-        printf("%i ", array[x]);
-    }
-
-    printf ("\n");
 }
