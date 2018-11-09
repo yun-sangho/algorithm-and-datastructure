@@ -17,5 +17,5 @@ Taking the cs50 course, I learned the basic algorithms and datastructers. After 
 ## Data structure
 
 - [x] linked List 2018-10-31
-- [ ] Hashtable
+- [x] Hashtable 2018-11-9
 - [ ] Tries
