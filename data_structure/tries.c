@@ -53,21 +53,21 @@ void insert_node(trie_node *root_node, char value[])
     int level = 0;
     int index;
 
-    trie_node *node = root_node;
+    trie_node *current_node = root_node;
 
     for (level = 0; level < len; level++)
     {
         index = char_to_index(value[level]);
 
-        if (!node->children[index])
+        if (!current_node->children[index])
         {
-            node->children[index] = get_node();
+            current_node->children[index] = get_node();
         }
 
-        node = node->children[index];
+        current_node = current_node->children[index];
     }
 
-    node->is_end_of_word = true;
+    current_node->is_end_of_word = true;
 }
 
 void search_node(trie_node *root_node, char value[])
@@ -76,22 +76,22 @@ void search_node(trie_node *root_node, char value[])
     int level = 0;
     int index;
 
-    trie_node *node = root_node;
+    trie_node *current_node = root_node;
 
     for (level = 0; level < len; level++)
     {
         index = char_to_index(value[level]);
 
-        if (!node->children[index])
+        if (!current_node->children[index])
         {
             printf("The value `%s` is not on the tries.\n", value);
             return;
         }
 
-        node = node->children[index];
+        current_node= current_node->children[index];
     }
 
-    if (node != NULL && node->is_end_of_word)
+    if (current_node != NULL && current_node->is_end_of_word)
     {
         printf("The value `%s` was founded.\n", value);
         return;

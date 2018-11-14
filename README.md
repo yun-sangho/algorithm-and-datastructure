@@ -18,4 +18,4 @@ Taking the cs50 course, I learned the basic algorithms and datastructers. After 
 
 - [x] linked List 2018-10-31
 - [x] Hashtable 2018-11-9
-- [ ] Tries
+- [x] Tries 2018-11-14
